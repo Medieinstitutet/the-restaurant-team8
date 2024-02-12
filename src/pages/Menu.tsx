@@ -1,3 +1,6 @@
 export const Menu = () => {
-    <>Menu!</>
+    return (
+        <>Menu!</>
+    )
+   
 }
