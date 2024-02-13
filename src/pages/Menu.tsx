@@ -1,6 +1,6 @@
 
 import menuData from '../components/menu/menu.json';
-import { MenuCategory } from '../components/menuCategory/menuCategoryenuCategory';
+import { MenuCategory } from '../components/menuCategory/menuCategory';
 
 const categoryNames: { [key: string]: string } = {
   Category1: "Förrätter",
