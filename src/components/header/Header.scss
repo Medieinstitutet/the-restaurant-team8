@@ -1,0 +1,18 @@
+header{
+
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header img{
+    object-fit: cover;
+    width: 100%;
+}
+
+h1{
+    position: absolute;
+    font-size: 2rem;
+}
