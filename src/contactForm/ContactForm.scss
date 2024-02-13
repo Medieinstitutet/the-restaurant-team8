@@ -1,4 +1,68 @@
+.inder-regular {
+  font-family: "Inder", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inknut-antiqua-light {
+  font-family: "Inknut Antiqua", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.sectionTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 label {
-  font-size: 10px;
-  margin-left: 10px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 0px;
+}
+
+input {
+  width: 80vw;
+  height: 30px;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 20px;
+  background-color: #ffe1c5;
+  color: black;
+}
+
+select {
+  height: 30px;
+  border-radius: 4px;
+  border: none;
+  margin-bottom: 20px;
+  background-color: #ffe1c5;
+  color: black;
+}
+
+textarea {
+  width: 80vw;
+  border-radius: 4px;
+  border: none;
+  background-color: #ffe1c5;
+  margin-bottom: 2px;
+}
+
+#PolicyCheck {
+  width: 10px;
+  height: 10px;
+}
+
+#submitBtn {
+  width: 70px;
+  border-radius: 0px;
+  background-color: #931621;
+  color: white;
+  height: 40px;
+}
+
+h2 {
+  font-size: 20px;
 }

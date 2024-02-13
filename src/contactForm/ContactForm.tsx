@@ -3,23 +3,45 @@ import "./ContactForm.scss";
 const ContactForm = () => {
   return (
     <form>
-      <h2>Synpunkter</h2>
-      <h3>Ämne</h3>
-      <input name="Ämne" type="text" />
-      <h3>Förnamn</h3>
-      <input name="Förnamn" type="text" />
-      <h3>Efternamn</h3>
+      <h2
+        className="inder-regular"
+        style={{
+          margin: "10px",
+          textShadow: "0px 2px #D26500",
+          textAlign: "center",
+        }}
+      >
+        Synpunkter
+      </h2>
+      <label className="inknut-antiqua-light">Ämne</label>
+      <select name="Ämne" id="ämne" required>
+        <option value="">-- Välj --</option>
+        <option value="service">Service</option>
+        <option value="mat">Mat</option>
+        <option value="personal">Personal</option>
+        <option value="webbsida">Webbsida</option>
+      </select>
+      <label className="inknut-antiqua-light">Förnamn</label>
+      <input name="Förnamn" type="text" required />
+      <label className="inknut-antiqua-light">Efternamn</label>
       <input name="Efternamn" type="text" />
-      <h3>Telefonnummer</h3>
+      <label className="inknut-antiqua-light">Telefonnummer</label>
       <input name="Telefonnummer" type="number" />
-      <h3>E-post</h3>
-      <input name="Mail" type="email" />
-      <h3>Meddelande</h3>
-      <textarea name="Meddelande" id="" cols={30} rows={10}></textarea> <br />
-      <input name="PolicyCheck" type="checkbox" />
-      <label htmlFor="PolicyCheck">
+      <label className="inknut-antiqua-light">E-post</label>
+      <input name="Mail" type="email" required />
+      <label className="inknut-antiqua-light">Meddelande</label>
+      <textarea name="Meddelande" id="" cols={30} rows={10} required></textarea>
+      <br />
+      <input name="PolicyCheck" type="checkbox" id="PolicyCheck" required />
+      <label
+        htmlFor="PolicyCheck"
+        className="inknut-antiqua-light"
+        style={{ display: "inline", marginLeft: "10px", letterSpacing: "0" }}
+      >
         Jag samtycker att mina uppgifter används
       </label>
+      <br />
+      <input type="submit" value={"Skicka ->"} id="submitBtn" />
     </form>
   );
 };
