@@ -1,0 +1,168 @@
+
+  {
+    "Category1": [
+      {
+        "Id": 1,
+        "Name": "Papadam",
+        "Description": "tunna krispiga chips serveras med mangochattni",
+        "Price": 49,
+        "Currency": "kr"
+      },
+      {
+        "Id": 2,
+        "Name": "Samosa 🌶",
+        "Description": "grönsakspirog, serveras med mintsås",
+        "Price": 79,
+        "Currency": "kr"
+      },
+      {
+        "Id": 3,
+        "Name": "Chicken Pakora",
+        "Description": "Friterade kycklingbitar, serveras med mintsås",
+        "Price": 75,
+        "Currency": "kr"
+      },
+      {
+        "Id": 4,
+        "Name": "Vegetarisk Pakora",
+        "Description": "friterade grönsaker, serveras med mintsås",
+        "Price": 75,
+        "Currency": "kr"
+      },
+      {
+        "Id": 5,
+        "Name": "King Prawn Butter Fly",
+        "Description": "friterade kungsräkor serveras med mintsås",
+        "Price": 80,
+        "Currency": "kr"
+      },
+      {
+        "Id": 6,
+        "Name": "Mango Chicken Sallad 🌶🌶",
+        "Description": "grillade kycklingbitar med koriander och specialkryddor",
+        "Price": 85,
+        "Currency": "kr"
+      }
+    ],
+
+    "Category2": [
+      {
+        "Id": 7,
+        "Name": "TANDOORI CHICKEN SIZLAR",
+        "Description": "Tandoorimarinerade kycklingklubbor",
+        "Price": 210,
+        "Currency": "kr"
+      },
+      {
+        "Id": 8,
+        "Name": "CHICKEN TIKKA SIZLAR",
+        "Description": "Tandoorimarinerad kycklingfilé",
+        "Price": 220,
+        "Currency": "kr"
+      },
+      {
+        "Id": 9,
+        "Name": "GARLIC CHICKEN SIZLAR",
+        "Description": "Vitlöksmarinerad kycklingfilé",
+        "Price": 225,
+        "Currency": "kr"
+      },
+      {
+        "Id": 10,
+        "Name": "LAMM TIKKA SIZLAR",
+        "Description": "Tandoorimarinerad lammfilé",
+        "Price": 265,
+        "Currency": "kr"
+      },
+      {
+        "Id": 11,
+        "Name": "SHESH KABAB SIZLAR",
+        "Description": "Tandoorimarinerade lammfärsjärpar",
+        "Price": 220,
+        "Currency": "kr"
+      },
+      {
+        "Id": 12,
+        "Name": "CHILI CHICKEN SIZLAR 🌶🌶🌶",
+        "Description": "Chilimarinerad kycklingfilé",
+        "Price": 220,
+        "Currency": "kr"
+      }
+    ],
+
+    "Category3": [
+      {
+        "Id": 13,
+        "Name": "VEGETARISK GRYTA 🌶🌶",
+        "Description": "blandade grönsaker, blomkål, lök, tomat i currysås",
+        "Price": 205,
+        "Currency": "kr"
+      },
+      {
+        "Id": 14,
+        "Name": "ALO GOBI 🌶🌶",
+        "Description": "Potatis & blomkålsrätt m. lök, tomat, ingefära, kummin, chili & koriander",
+        "Price": 205,
+        "Currency": "kr"
+      },
+      {
+        "Id": 15,
+        "Name": "VEGETARISK KORMA",
+        "Description": "blandade grönsaker med lök, kokos, russin och cashewnötsås",
+        "Price": 205,
+        "Currency": "kr"
+      },
+      {
+        "Id": 16,
+        "Name": "PALOK PONIR 🌶🌶",
+        "Description": "bladspenat tillagad med hemlagad ost, lök i curry och tomatsås",
+        "Price": 209,
+        "Currency": "kr"
+      },
+      {
+        "Id": 17,
+        "Name": "ALO MOTOR PONIR 🌶",
+        "Description": "Potatis och ärtor tillagad med hemlagad ost med tomat, lök, paprika i curry sås",
+        "Price": 209,
+        "Currency": "kr"
+      },
+      {
+        "Id": 18,
+        "Name": "PONIR KORMA",
+        "Description": "smör stekt hemlagad ost med yoghut och kormasås",
+        "Price": 209,
+        "Currency": "kr"
+      }
+    ],
+
+    "Category4": [
+      {
+        "Id": 19,
+        "Name": "TANDOORI CHICKEN",
+        "Description": "tandoorimarinerade Kycklingklubbor",
+        "Price": 89,
+        "Currency": "kr"
+      },
+      {
+        "Id": 20,
+        "Name": "CHICKEN KORMA",
+        "Description": "kycklingfilé i mild gryta med grädde, russin och casewnötter",
+        "Price": 89,
+        "Currency": "kr"
+      },
+      {
+        "Id": 21,
+        "Name": "TIKKA BUTTER MASALA",
+        "Description": "grillad kycklingfilé, med smör, grädde, nötter i god yoghurt sås",
+        "Price": 89,
+        "Currency": "kr"
+      },
+      {
+        "Id": 22,
+        "Name": "KÖTTBULLAR I GRYTA",
+        "Description": "köttbullar i god mild sås",
+        "Price": 89,
+        "Currency": "kr"
+      }
+    ]
+  }
