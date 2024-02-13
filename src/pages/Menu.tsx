@@ -1,6 +1,6 @@
 
 import menuData from '../components/menu/menu.json';
-import { MenuCategory } from '../components/menuCategory/MenuCategory';
+import { MenuCategory } from '../components/menuCategory/menuCategory';
 
 
 export const Menu = () => {
