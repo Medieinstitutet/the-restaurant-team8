@@ -10,7 +10,8 @@
       },
       {
         "Id": 2,
-        "Name": "Samosa 🌶",
+        "Name": "Samosa",
+        "Hot": " 🌶",
         "Description": "grönsakspirog, serveras med mintsås",
         "Price": 79,
         "Currency": "kr"
@@ -38,7 +39,8 @@
       },
       {
         "Id": 6,
-        "Name": "Mango Chicken Sallad 🌶🌶",
+        "Name": "Mango Chicken Sallad",
+        "Hot": " 🌶🌶",
         "Description": "grillade kycklingbitar med koriander och specialkryddor",
         "Price": 85,
         "Currency": "kr"
@@ -83,7 +85,8 @@
       },
       {
         "Id": 12,
-        "Name": "CHILI CHICKEN SIZLAR 🌶🌶🌶",
+        "Name": "CHILI CHICKEN SIZLAR",
+        "Hot":" 🌶🌶🌶",
         "Description": "Chilimarinerad kycklingfilé",
         "Price": 220,
         "Currency": "kr"
@@ -93,14 +96,16 @@
     "Category3": [
       {
         "Id": 13,
-        "Name": "VEGETARISK GRYTA 🌶🌶",
+        "Name": "VEGETARISK GRYTA",
+        "Hot": " 🌶🌶",
         "Description": "blandade grönsaker, blomkål, lök, tomat i currysås",
         "Price": 205,
         "Currency": "kr"
       },
       {
         "Id": 14,
-        "Name": "ALO GOBI 🌶🌶",
+        "Name": "ALO GOBI",
+        "Hot": " 🌶🌶",
         "Description": "Potatis & blomkålsrätt m. lök, tomat, ingefära, kummin, chili & koriander",
         "Price": 205,
         "Currency": "kr"
@@ -114,14 +119,16 @@
       },
       {
         "Id": 16,
-        "Name": "PALOK PONIR 🌶🌶",
+        "Name": "PALOK PONIR",
+        "Hot": " 🌶🌶",
         "Description": "bladspenat tillagad med hemlagad ost, lök i curry och tomatsås",
         "Price": 209,
         "Currency": "kr"
       },
       {
         "Id": 17,
-        "Name": "ALO MOTOR PONIR 🌶",
+        "Name": "ALO MOTOR PONIR",
+        "Hot": " 🌶",
         "Description": "Potatis och ärtor tillagad med hemlagad ost med tomat, lök, paprika i curry sås",
         "Price": 209,
         "Currency": "kr"

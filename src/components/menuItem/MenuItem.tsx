@@ -9,7 +9,7 @@ export const MenuItem = ({ item }:MenuItemProps ) => {
     
     return (
         <div className="menu-item">
-            <h3 className="menu-item-name">{item.Name}</h3>
+            <h3 className="menu-item-name">{item.Id}. {item.Name} {item.Hot && <span className="hot-item">{item.Hot}</span>}</h3>
             <p className="menu-item-description">{item.Description}</p>
             <p className="menu-item-price">Pris: {item.Price} {item.Currency}</p>
         </div>
