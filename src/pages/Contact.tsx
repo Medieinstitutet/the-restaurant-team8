@@ -1,8 +1,12 @@
+import { Header } from "../components/header/Header";
 import ContactForm from "../contactForm/ContactForm";
 import "../contactForm/ContactForm.scss";
+import HeaderImage from '../images/contact_header.png'
 
 export const Contact = () => {
   return (
+    <>
+    <Header title="Kontakta oss" imageUrl={HeaderImage}/>
     <main>
       <section className="sectionTop">
         <div
@@ -45,5 +49,6 @@ export const Contact = () => {
         <ContactForm />
       </section>
     </main>
+    </>
   );
 };
