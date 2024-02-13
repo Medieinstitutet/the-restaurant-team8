@@ -1,0 +1,21 @@
+.menu-category {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    // padding-left: 0.5rem;
+    // padding-right: 0.5rem;
+}
+
+.menu-category-title {
+    font-size: 2rem; 
+    font-weight: bold; 
+    
+    margin-bottom: 1rem; 
+    padding: 0.5rem 0; 
+    text-align: center; 
+    width: 100%; 
+
+  }
+
