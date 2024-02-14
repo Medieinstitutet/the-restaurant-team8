@@ -2,6 +2,7 @@
 import { Header } from '../components/header/Header';
 import menuData from '../components/menu/menu.json';
 import { MenuCategory } from '../components/menuCategory/menuCategory';
+
 import HeaderImage from '../images/menu_header.png'
 
 const categoryNames: { [key: string]: string } = {
