@@ -1,7 +1,7 @@
 
 import { Header } from '../components/header/Header';
 import menuData from '../components/menu/menu.json';
-import { MenuCategory } from '../components/menuCategory/menuCategory';
+import { MenuCategory } from '../components/menuCategory/MenuCategory';
 
 import HeaderImage from '../images/menu_header.png'
 
