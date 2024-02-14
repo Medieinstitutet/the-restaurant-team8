@@ -1,4 +1,4 @@
-import { MenuCategory } from "../menuCategory/MenuCategory";
+import { MenuCategory } from "../menuCategory/menuCategory";
 import menuJson from "../menu/menu.json";
 import { IMenuData } from "../../models/IMenuData";
 
@@ -14,16 +14,14 @@ export const FoodMenu = () => {
   // console.log(menuData);
   return (
     <>
-      {Object.entries(menuData).map(
-        ([CategoryName, categoryData], index) => (
-          <MenuCategory
-            key={index}
-            title={categoryNames[CategoryName]}
-            items={categoryData.items}
-            images={categoryData.images}
-          />
-        )
-      )}
+      {Object.entries(menuData).map(([CategoryName, categoryData], index) => (
+        <MenuCategory
+          key={index}
+          title={categoryNames[CategoryName]}
+          items={categoryData.items}
+          images={categoryData.images}
+        />
+      ))}
     </>
   );
 };
