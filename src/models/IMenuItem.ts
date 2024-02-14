@@ -6,5 +6,6 @@ export interface IMenuItem {
     Price: number;
     Currency: string;
     
+    
 }
 

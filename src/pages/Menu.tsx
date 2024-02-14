@@ -10,6 +10,8 @@ export const Menu = () => {
     <>
     <Header title = "Meny" imageUrl={HeaderImage} />
     <FoodMenu />
+   
     </>
   );
 };
+

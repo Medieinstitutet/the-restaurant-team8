@@ -1,6 +1,6 @@
-
-  {
-    "Category1": [
+{
+  "Category1": {
+    "items": [
       {
         "Id": 1,
         "Name": "Papadam",
@@ -47,7 +47,14 @@
       }
     ],
 
-    "Category2": [
+    "images": [
+      "../../../public/assets/Butter-Masala.png",
+      "../../../public/assets/Matar-Paneer.png"
+    ]
+  },
+
+  "Category2": {
+    "items": [
       {
         "Id": 7,
         "Name": "TANDOORI CHICKEN SIZLAR",
@@ -86,14 +93,20 @@
       {
         "Id": 12,
         "Name": "CHILI CHICKEN SIZLAR",
-        "Hot":" 🌶🌶🌶",
+        "Hot": " 🌶🌶🌶",
         "Description": "Chilimarinerad kycklingfilé",
         "Price": 220,
         "Currency": "kr"
       }
     ],
+    "images": [
+      "../../../public/assets/Gobi-Manchurian.png",
+      "../../../public/assets/Tandoori-Chicken-Tikka.png"
+    ]
+  },
 
-    "Category3": [
+  "Category3": {
+    "items": [
       {
         "Id": 13,
         "Name": "VEGETARISK GRYTA",
@@ -140,9 +153,11 @@
         "Price": 209,
         "Currency": "kr"
       }
-    ],
+    ]
+  },
 
-    "Category4": [
+  "Category4": {
+    "items": [
       {
         "Id": 19,
         "Name": "TANDOORI CHICKEN",
@@ -173,3 +188,4 @@
       }
     ]
   }
+}

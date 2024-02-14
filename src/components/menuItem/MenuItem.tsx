@@ -1,4 +1,5 @@
 import { IMenuItem } from "../../models/IMenuItem"
+
 import "../menuItem/MenuItem.scss"
 
 interface MenuItemProps {
