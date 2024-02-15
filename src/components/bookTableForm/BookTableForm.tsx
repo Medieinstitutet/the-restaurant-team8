@@ -1,5 +1,5 @@
 import { ChangeEvent, FormEvent } from "react";
-
+import './BookingForm.scss'
 interface IBookTableFormProps {
     name: string,
     lastName: string,
@@ -15,7 +15,8 @@ interface IBookTableFormProps {
 export const BookTableForm = (props: IBookTableFormProps) => {
 
     return <>
-<form onSubmit={props.handleSubmit}>
+<form className="bookingForm" onSubmit={props.handleSubmit}>
+    <h2>Vem?</h2>
     <input type="text"
     value={props.name}
     onChange={props.onNameChange}
@@ -32,7 +33,10 @@ export const BookTableForm = (props: IBookTableFormProps) => {
     value={props.phone}
     onChange={props.onPhoneChange}
     placeholder="Telefonnr"/>
-    <button type="submit"></button>
+    <div>
+        <button className="orange-btn" type="submit">Boka</button>
+        <button className="red-btn">Avbryt</button>
+    </div>
 </form>
 </>
 }

@@ -1,0 +1,27 @@
+
+.bookingForm input[type=text]{
+    background-color: white;
+}
+
+.orange-btn, .red-btn {
+    color: white;
+    width: 100px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 13px;
+}
+
+.orange-btn{
+
+background-color: #D26500;
+}
+
+.red-btn{
+    background-color: #931621;
+}
+
+.bookingForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

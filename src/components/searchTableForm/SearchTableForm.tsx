@@ -20,10 +20,6 @@ export const SearchTableForm = (props: ISearchTableFormProps) => {
               <select name="numberOfGuests" id="numberOfGuests" 
               onChange={props.onNumberOfGuestsChange}
               value={props.numberOfGuests}>
-                <option value="" disabled selected>
-                  {" "}
-                  -- Välj --
-                </option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -37,7 +33,8 @@ export const SearchTableForm = (props: ISearchTableFormProps) => {
                 <input type="date" name="date" 
                 id="date" 
                 placeholder="YYYY-MM-DD"
-                value={props.date} />
+                value={props.date} 
+                onChange={props.onDateChange}/>
             </div>
         </div>
         <button type="submit">Sök efter bord</button>

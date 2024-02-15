@@ -2,9 +2,12 @@ import { FormEvent, useState } from "react";
 import axios from "axios";
 import { SearchTableForm } from "../searchTableForm/SearchTableForm";
 import { BookTableForm } from "../bookTableForm/BookTableForm";
+import { TimeSlot } from '../timeSlot/TimeSlot';
+import { TimeSlotsContainer } from "../timeSlotsContainer/TimeSlotsContainer";
 
 export const BookTable = () => {
   const restaurantId = "65ca1266c11c3c8be672e7c9"
+  const sittings = ["18:00", "21:00"]
 
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("")
@@ -40,6 +43,7 @@ const handleBookTable = async (e: FormEvent) => {
   catch (error) {
       alert('Något gick fel, försök igen')
   }
+  console.log(numberOfGuests)
 }
 
   return (
@@ -53,7 +57,11 @@ const handleBookTable = async (e: FormEvent) => {
      onNumberOfGuestsChange={(e) => setNumberOfGuests(+e.target.value)}
      onDateChange={(e) => setDate(e.target.value)}
      />
-
+      
+      <TimeSlotsContainer
+      sittings={sittings}
+      setTime={setTime}
+      />
      <BookTableForm
      name={name}
      lastName={lastName}
