@@ -1,10 +1,24 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import axios from "axios";
 import { SearchTableForm } from "../searchTableForm/SearchTableForm";
 import { BookTableForm } from "../bookTableForm/BookTableForm";
 import { TableClass } from "../../models/TableClass";
+import { BookingClass } from "../../models/BookingClass";
 
 export const BookTable = () => {
+  const [tablesData, setTablesData] = useState<BookingClass[]>([]);
+  useEffect(() => {
+    axios
+      .get(
+        "https://school-restaurant-api.azurewebsites.net/booking/restaurant/65ca1266c11c3c8be672e7c9"
+      )
+      .then(function (response) {
+        setTablesData(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, []);
   // const [name, setName] = useState("");
   // const [lastName, setLastName] = useState("");
   // const [email, setEmail] = useState("");
@@ -16,7 +30,7 @@ export const BookTable = () => {
     restaurantId: "65ca1266c11c3c8be672e7c9",
     date: "",
     time: "15:00",
-    numberOfGuests: 0,
+    numberOfGuests: 1,
     customer: {
       name: "",
       lastname: "",
@@ -25,7 +39,12 @@ export const BookTable = () => {
     },
   });
   const [bookingSuccess, setBookingSuccess] = useState(false);
-  const handleSearchTable = async () => {};
+  const [toggleBooking, setToggleBooking] = useState(false);
+  const handleSearchTable = () => {
+    tablesData.length < 15
+      ? (setToggleBooking(true), console.log("inte större än 15"))
+      : (setToggleBooking(false), console.log("Större än 15"));
+  };
   const handleBookTable = async (e: FormEvent) => {
     console.log(tableContainer);
 
@@ -60,40 +79,47 @@ export const BookTable = () => {
               setTableContainer({ ...tableContainer, date: e.target.value })
             }
           />
-
-          <BookTableForm
-            onNameChange={(e) =>
-              setTableContainer({
-                ...tableContainer,
-                customer: { ...tableContainer.customer, name: e.target.value },
-              })
-            }
-            onLastNameChange={(e) =>
-              setTableContainer({
-                ...tableContainer,
-                customer: {
-                  ...tableContainer.customer,
-                  lastname: e.target.value,
-                },
-              })
-            }
-            onEmailChange={(e) =>
-              setTableContainer({
-                ...tableContainer,
-                customer: { ...tableContainer.customer, email: e.target.value },
-              })
-            }
-            onPhoneChange={(e) =>
-              setTableContainer({
-                ...tableContainer,
-                customer: {
-                  ...tableContainer.customer,
-                  phone: parseInt(e.target.value),
-                },
-              })
-            }
-            handleSubmit={handleBookTable}
-          />
+          {toggleBooking && (
+            <BookTableForm
+              onNameChange={(e) =>
+                setTableContainer({
+                  ...tableContainer,
+                  customer: {
+                    ...tableContainer.customer,
+                    name: e.target.value,
+                  },
+                })
+              }
+              onLastNameChange={(e) =>
+                setTableContainer({
+                  ...tableContainer,
+                  customer: {
+                    ...tableContainer.customer,
+                    lastname: e.target.value,
+                  },
+                })
+              }
+              onEmailChange={(e) =>
+                setTableContainer({
+                  ...tableContainer,
+                  customer: {
+                    ...tableContainer.customer,
+                    email: e.target.value,
+                  },
+                })
+              }
+              onPhoneChange={(e) =>
+                setTableContainer({
+                  ...tableContainer,
+                  customer: {
+                    ...tableContainer.customer,
+                    phone: parseInt(e.target.value),
+                  },
+                })
+              }
+              handleSubmit={handleBookTable}
+            />
+          )}
         </>
       )}
     </>
