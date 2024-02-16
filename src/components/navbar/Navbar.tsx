@@ -1,29 +1,21 @@
-import { NavLink } from "react-router-dom";
-import logo from '../../images/logo.png'
-import './Navbar.scss'
+import logo from "../../images/logo.png";
+import "./Navbar.scss";
+import { HamburgerMenu } from "../hamburgerMenu/HamburgerMenu";
+import { useState } from "react";
 export const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <nav>
       <div className="logoContainer">
         <img src={logo} alt="logotyp" />
       </div>
-      <ul>
-        <li>
-          <NavLink to={"/"}>Home</NavLink>
-        </li>
-        <li>
-          <NavLink to={"/booking"}>Boka</NavLink>
-        </li>
-        <li>
-          <NavLink to={"/menu"}>Meny</NavLink>
-        </li>
-        <li>
-          <NavLink to={"/contact"}>Kontakt</NavLink>
-        </li>
-        <li>
-          <NavLink to={"/admin"}>Admin</NavLink>
-        </li>
-      </ul>
+      <div className="hamburger-menu-container">
+        <HamburgerMenu isOpen={isOpen} toggleMenu={toggleMenu} />
+      </div>
     </nav>
   );
 };
