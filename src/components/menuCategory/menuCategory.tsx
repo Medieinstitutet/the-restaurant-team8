@@ -1,11 +1,12 @@
 import { IMenuItem } from "../../models/IMenuItem";
 import { MenuItem } from "../menuItem/MenuItem";
 import "../menuCategory/menuCategory.scss";
+import { IMenuImage } from "../../models/IMenuImage";
 
 interface MenuCategoryProps {
   title: string;
   items: IMenuItem[];
-  images?: string[];
+  images?: IMenuImage[];
 }
 
 export const MenuCategory = ({ title, items, images }: MenuCategoryProps) => {
@@ -16,9 +17,19 @@ export const MenuCategory = ({ title, items, images }: MenuCategoryProps) => {
         {items.map((item) => (
           <MenuItem key={item.Id} item={item} />
         ))}
-        { images?.map((image, imgIndex) => (
-            <img key={imgIndex} src={image} alt={`Category ${title} image ${imgIndex}`}/>
-        ))}
+        <div className="menu-category-images">
+          {images?.map((image, imgIndex) => (
+            <div key={imgIndex} className="menu-category-image">
+              <img
+                src={image.Src}
+                alt={`Category ${title} image ${imgIndex}`}
+              />
+              <p className="menu-category-image-description">
+                {image.Description}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

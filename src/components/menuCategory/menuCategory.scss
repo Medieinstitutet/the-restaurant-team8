@@ -17,4 +17,26 @@
     width: 100%; 
 
   }
+  .menu-category-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .menu-category-image {
+    flex: 0 1 calc(50% - 10px);
+    box-sizing: border-box;
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .menu-category-image-description {
+      margin-top: 0.5rem; 
+      text-align: center; 
+      color: #EABE81; 
+      font-size: 0.875rem; 
+    }
+  }
 

@@ -48,8 +48,18 @@
     ],
 
     "images": [
-      "../../../public/assets/Butter-Masala.png",
-      "../../../public/assets/Matar-Paneer.png"
+      {
+        "Src": "../../../public/assets/Butter-Masala.png",
+        "Description": "Butter Masala"
+      },
+      {
+        "Src": "../../../public/assets/Matar-Paneer.png",
+        "Description": "Matar Paneer"
+      }
+      
+
+      
+      
     ]
   },
 
@@ -100,8 +110,17 @@
       }
     ],
     "images": [
-      "../../../public/assets/Gobi-Manchurian.png",
-      "../../../public/assets/Tandoori-Chicken-Tikka.png"
+      {
+       "Src": ":../../../public/assets/Gobi-Manchurian.png",
+       "Description": "Gobi Manchurian"
+      },
+      {
+        "Src": "../../../public/assets/Tandoori-Chicken-Tikka.png",
+        "Description": "Tandoori Chicken Tikka"
+      }
+     
+
+      
     ]
   },
 
