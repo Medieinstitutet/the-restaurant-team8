@@ -2,7 +2,6 @@ import { FormEvent, useState } from "react";
 import axios from "axios";
 import { SearchTableForm } from "../searchTableForm/SearchTableForm";
 import { BookTableForm } from "../bookTableForm/BookTableForm";
-import { TimeSlot } from '../timeSlot/TimeSlot';
 import { TimeSlotsContainer } from "../timeSlotsContainer/TimeSlotsContainer";
 
 export const BookTable = () => {
