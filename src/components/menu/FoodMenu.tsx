@@ -1,4 +1,4 @@
-import { MenuCategory } from "../menuCategory/menuCategory";
+import { MenuCategory } from "../menuCategory/MenuCategory";
 import menuJson from "../menu/menu.json";
 import { IMenuData } from "../../models/IMenuData";
 
