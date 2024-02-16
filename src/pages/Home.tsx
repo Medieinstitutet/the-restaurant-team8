@@ -18,6 +18,7 @@ export const Home = () => {
       <div style={{width: "80vw", margin: "auto"}}>
         <img style= {{width: "100%"}} src={RestaurantImage} alt="restaurang" />
       </div>
+
     </>
   );
 };
