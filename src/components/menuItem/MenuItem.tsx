@@ -2,11 +2,11 @@ import { IMenuItem } from "../../models/IMenuItem"
 
 import "../menuItem/MenuItem.scss"
 
-interface MenuItemProps {
+interface IMenuItemProps {
     item: IMenuItem;
 }
 
-export const MenuItem = ({ item }:MenuItemProps ) => {
+export const MenuItem = ({ item }:IMenuItemProps ) => {
     
     return (
         <div className="menu-item">

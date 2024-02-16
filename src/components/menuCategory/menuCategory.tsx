@@ -1,15 +1,8 @@
-import { IMenuItem } from "../../models/IMenuItem";
 import { MenuItem } from "../menuItem/MenuItem";
 import "../menuCategory/menuCategory.scss";
-import { IMenuImage } from "../../models/IMenuImage";
+import { IMenuCategory } from "../../models/IMenuCategory";
 
-interface MenuCategoryProps {
-  title: string;
-  items: IMenuItem[];
-  images?: IMenuImage[];
-}
-
-export const MenuCategory = ({ title, items, images }: MenuCategoryProps) => {
+export const MenuCategory = ({ title, items, images }: IMenuCategory) => {
   return (
     <>
       <div className="menu-category">

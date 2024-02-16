@@ -1,26 +1,22 @@
 import { NavLink } from "react-router-dom";
 import "../hamburgerMenu/HamburgerMenu.scss";
+import { IHamburgerMenu } from "../../models/IHamburgerMenu";
 
 
-interface IHamburgerMenuProps {
-    isOpen: boolean;
-    toggleMenu: () => void;
-}
-
-export const HamburgerMenu = ({isOpen, toggleMenu}:IHamburgerMenuProps) => {
-  
-
-    return (
-        <>
-       
-            <button className={`hamburger-menu ${isOpen ? 'open': ''}`} onClick={toggleMenu}>
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            {isOpen && (
-        <ul className={`nav-links ${isOpen ? 'open': ''}`}>
-          <li >
+export const HamburgerMenu = ({ isOpen, toggleMenu }: IHamburgerMenu) => {
+  return (
+    <>
+      <button
+        className={`hamburger-menu ${isOpen ? "open" : ""}`}
+        onClick={toggleMenu}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      {isOpen && (
+        <ul className={`nav-links ${isOpen ? "open" : ""}`}>
+          <li>
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
@@ -37,8 +33,6 @@ export const HamburgerMenu = ({isOpen, toggleMenu}:IHamburgerMenuProps) => {
           </li> */}
         </ul>
       )}
-          
-        </>
-    );
+    </>
+  );
 };
-
