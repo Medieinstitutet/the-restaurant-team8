@@ -4,6 +4,7 @@ import { SearchTableForm } from "../searchTableForm/SearchTableForm";
 import { BookTableForm } from "../bookTableForm/BookTableForm";
 import { TableClass } from "../../models/TableClass";
 import { BookingClass } from "../../models/BookingClass";
+import BookTableTime from "./BookTableTime";
 
 export const BookTable = () => {
   const [tablesData, setTablesData] = useState<BookingClass[]>([]);
@@ -18,18 +19,12 @@ export const BookTable = () => {
       .catch(function (error) {
         console.log(error);
       });
-  }, []);
-  // const [name, setName] = useState("");
-  // const [lastName, setLastName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [phone, setPhone] = useState("");
-  // const [numberOfGuests, setNumberOfGuests] = useState(1);
-  // const [date, setDate] = useState("");
-  // const [time, setTime] = useState("");
+  });
+
   const [tableContainer, setTableContainer] = useState<TableClass>({
     restaurantId: "65ca1266c11c3c8be672e7c9",
     date: "",
-    time: "15:00",
+    time: "",
     numberOfGuests: 1,
     customer: {
       name: "",
@@ -38,33 +33,110 @@ export const BookTable = () => {
       phone: 0,
     },
   });
-  const [bookingSuccess, setBookingSuccess] = useState(false);
-  const [toggleBooking, setToggleBooking] = useState(false);
-  const handleSearchTable = () => {
-    tablesData.length < 15
-      ? (setToggleBooking(true), console.log("inte större än 15"))
-      : (setToggleBooking(false), console.log("Större än 15"));
-  };
-  const handleBookTable = async (e: FormEvent) => {
-    console.log(tableContainer);
 
+  const [toggleBooking, setToggleBooking] = useState("");
+  const [tableFree19, setTableFree19] = useState(false);
+  const [tableFree21, setTableFree21] = useState(false);
+  const handleSearchTable = () => {
+    const filterTablesDate = tablesData.filter(
+      (table) => table.date === tableContainer.date
+    );
+
+    const filterTablesDateTime19 = filterTablesDate.filter(
+      (table) => table.time === "19:00"
+    );
+    const filterTablesDateTime21 = filterTablesDate.filter(
+      (table) => table.time === "21:00"
+    );
+
+    // Max antalet bord per tid
+    filterTablesDateTime19.length < 15
+      ? setTableFree19(true)
+      : setTableFree19(false);
+    filterTablesDateTime21.length < 15
+      ? setTableFree21(true)
+      : setTableFree21(false);
+
+    setToggleBooking("openTime");
+  };
+
+  const handleBookTable = async (e: FormEvent) => {
     e.preventDefault();
     try {
       await axios.post(
         "https://school-restaurant-api.azurewebsites.net/booking/create",
         tableContainer
       );
-      setBookingSuccess(true);
+      setToggleBooking("2");
       alert("Bokningen lyckades");
     } catch (error) {
       alert("Något gick fel, försök igen");
     }
   };
 
-  return (
-    <>
-      {!bookingSuccess && (
-        <>
+  function handleOnClick(time: string) {
+    setTableContainer({
+      ...tableContainer,
+      time: time,
+    });
+    setToggleBooking("openUserInfo");
+  }
+
+  function renderSwitch(param: string) {
+    switch (param) {
+      case "openTime":
+        return (
+          <BookTableTime
+            handleOnClick={(time) => handleOnClick(time)}
+            tableFree19={tableFree19}
+            tableFree21={tableFree21}
+          />
+        );
+
+      case "openUserInfo":
+        return (
+          <BookTableForm
+            onNameChange={(e) =>
+              setTableContainer({
+                ...tableContainer,
+                customer: {
+                  ...tableContainer.customer,
+                  name: e.target.value,
+                },
+              })
+            }
+            onLastNameChange={(e) =>
+              setTableContainer({
+                ...tableContainer,
+                customer: {
+                  ...tableContainer.customer,
+                  lastname: e.target.value,
+                },
+              })
+            }
+            onEmailChange={(e) =>
+              setTableContainer({
+                ...tableContainer,
+                customer: {
+                  ...tableContainer.customer,
+                  email: e.target.value,
+                },
+              })
+            }
+            onPhoneChange={(e) =>
+              setTableContainer({
+                ...tableContainer,
+                customer: {
+                  ...tableContainer.customer,
+                  phone: parseInt(e.target.value),
+                },
+              })
+            }
+            handleSubmit={handleBookTable}
+          />
+        );
+      default:
+        return (
           <SearchTableForm
             handleSubmit={handleSearchTable}
             date={tableContainer.date}
@@ -79,49 +151,9 @@ export const BookTable = () => {
               setTableContainer({ ...tableContainer, date: e.target.value })
             }
           />
-          {toggleBooking && (
-            <BookTableForm
-              onNameChange={(e) =>
-                setTableContainer({
-                  ...tableContainer,
-                  customer: {
-                    ...tableContainer.customer,
-                    name: e.target.value,
-                  },
-                })
-              }
-              onLastNameChange={(e) =>
-                setTableContainer({
-                  ...tableContainer,
-                  customer: {
-                    ...tableContainer.customer,
-                    lastname: e.target.value,
-                  },
-                })
-              }
-              onEmailChange={(e) =>
-                setTableContainer({
-                  ...tableContainer,
-                  customer: {
-                    ...tableContainer.customer,
-                    email: e.target.value,
-                  },
-                })
-              }
-              onPhoneChange={(e) =>
-                setTableContainer({
-                  ...tableContainer,
-                  customer: {
-                    ...tableContainer.customer,
-                    phone: parseInt(e.target.value),
-                  },
-                })
-              }
-              handleSubmit={handleBookTable}
-            />
-          )}
-        </>
-      )}
-    </>
-  );
+        );
+    }
+  }
+
+  return renderSwitch(toggleBooking);
 };

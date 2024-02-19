@@ -1,5 +1,6 @@
 import { ChangeEvent, FormEvent } from "react";
 import "./BookingForm.scss";
+
 interface IBookTableFormProps {
   onNameChange: (e: ChangeEvent<HTMLInputElement>) => void;
   onLastNameChange: (e: ChangeEvent<HTMLInputElement>) => void;
@@ -40,7 +41,14 @@ export const BookTableForm = (props: IBookTableFormProps) => {
           <button className="orange-btn" type="submit">
             Boka
           </button>
-          <button className="red-btn">Avbryt</button>
+          <button
+            onClick={() => {
+              location.reload();
+            }}
+            className="red-btn"
+          >
+            Avbryt
+          </button>
         </div>
       </form>
     </>
