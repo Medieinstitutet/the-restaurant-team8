@@ -30,37 +30,29 @@ export const Admin = () => {
 
   useEffect(() => {
     const fetchCustomers = async () => {
+      if (bookings.length > 0) {
+        try {
+          const showCustomer = bookings.map((booking) =>
+            axios.get(
+              `https://school-restaurant-api.azurewebsites.net/customer/${booking.customerId}`
+            )
+          );
 
-    if (bookings.length > 0) {
-     try {
-      const showCustomer = bookings.map((booking) =>
-      axios.get(
-        `https://school-restaurant-api.azurewebsites.net/customer/${booking.customerId}`
-      )
-    );
+          const customerResponse = await Promise.all(showCustomer);
 
-   
-      const customerResponse = await Promise.all(showCustomer);
+          console.log(customerResponse);
 
-      console.log(customerResponse)
-
-      const customerData = customerResponse.map(
-        (response) => response.data[0]
-      );
-      setCustomers(customerData);
-
-     }
-      
-         catch (error) {
+          const customerData = customerResponse.map(
+            (response) => response.data[0]
+          );
+          setCustomers(customerData);
+        } catch (error) {
           console.log(error);
         }
       }
-    }
-      fetchCustomers();
-      
-    
+    };
+    fetchCustomers();
   }, [bookings]);
-  
 
   const handleDelete = (id: string) => {
     axios
@@ -113,10 +105,10 @@ export const Admin = () => {
             return (
               <tr key={booking._id}>
                 <td>{booking._id}</td>
-                <td>{customer? customer.name : 'loading...'}</td>
-                <td>{customer? customer.lastname : 'Loading...'}</td>
-                <td>{customer? customer.phone : 'Loading...'}</td>
-                <td>{customer? customer.email : 'Loading...'}</td>
+                <td>{customer ? customer.name : "loading..."}</td>
+                <td>{customer ? customer.lastname : "Loading..."}</td>
+                <td>{customer ? customer.phone : "Loading..."}</td>
+                <td>{customer ? customer.email : "Loading..."}</td>
                 <td>{booking.date}</td>
                 <td>{booking.time}</td>
                 <td>{booking.numberOfGuests}</td>
