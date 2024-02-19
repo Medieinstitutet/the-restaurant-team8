@@ -23,7 +23,7 @@ export const BookTableForm = (props: IBookTableFormProps) => {
     onChange={props.onNameChange}
     placeholder="Förnamn"/>
     <input type="text"
-    value={props.lastName}
+    value={props.lastname}
     onChange={props.onLastNameChange}
     placeholder="Efternamn"/>
     <input type="text"

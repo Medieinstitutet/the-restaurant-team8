@@ -1,6 +1,6 @@
 import menuJson from "../menu/menu.json";
 import { IMenuData } from "../../models/IMenuData";
-import { MenuCategory } from "../menuCategory/menuCategory";
+import { MenuCategory } from "../menuCategory/MenuCategory";
 
 const menuData: IMenuData = menuJson;
 
