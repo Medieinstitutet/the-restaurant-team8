@@ -1,38 +1,40 @@
-.container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2rem;
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
-.formSection{
-    width: 40%;
-    display: flex;
-    flex-direction: column;
+.formSection {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
 }
 
-.searchForm{
-    display: flex;
-    flex-direction: column;
+.searchForm {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
-.searchForm button {
-    background-color: #D26500;
-    color: white;
-    margin: auto;
-    width: 70%;
+#searchTableBtn {
+  background-color: #d26500;
+  color: white;
+  margin: auto;
+  width: 70%;
 }
 
-#date, #numberOfGuests {
-    background-color: white;
-    width: 100%;
+
+
+.row {
+  width: 100%;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
 }
 
-.row{
-    width: 100%;
-    justify-content: space-evenly;
-    display: flex;
-    flex-direction: row;
+.searchFormInput{
+  width: 100%;
+  background-color: white;
 }

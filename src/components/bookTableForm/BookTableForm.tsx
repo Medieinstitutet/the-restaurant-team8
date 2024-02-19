@@ -1,5 +1,6 @@
 import { ChangeEvent, FormEvent } from "react";
-import './BookingForm.scss'
+import "./BookingForm.scss";
+
 interface IBookTableFormProps {
     name: string,
     lastname: string,

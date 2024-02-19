@@ -5,7 +5,7 @@ import { CustomerClass } from "../models/CustomerClass";
 
 export interface IBookingUpdate {
   name: string;
-  lastName: string;
+  lastname: string;
   email: string;
   phone: string;
 }
