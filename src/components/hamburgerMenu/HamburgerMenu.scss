@@ -6,14 +6,18 @@
   background-color: transparent;
   border: none;
   height: auto;
-  width: 5rem;
+  width: 4.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   transition: transform 0.3s ease;
+  outline: none;
 
+  .hamburger-menu:focus {
+    outline: none;
+  }
   span {
     display: block;
     background-color: #eabe81;
@@ -42,9 +46,11 @@
 }
 
 .nav-links {
+  z-index: 1;
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 16px;
   background: rgba(0, 0, 0, 0.8);
   position: absolute;
   top: 100%;
