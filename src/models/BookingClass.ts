@@ -5,7 +5,14 @@ export class BookingClass {
     public restaurantId: string,
     public date: string,
     public time: string,
-    public numberOfGuests: number
+    public numberOfGuests: number,
+    public customer: {
+      _id: string,
+      name: string,
+      lastname: string,
+      phone: string,
+      email:string,
+    }
   ) {}
   // Add class properties and methods here
 }

@@ -2,7 +2,7 @@ import { ChangeEvent, FormEvent } from "react";
 import './BookingForm.scss'
 interface IBookTableFormProps {
     name: string,
-    lastName: string,
+    lastname: string,
     email: string,
     phone: string,
     onNameChange: (e: ChangeEvent<HTMLInputElement>) => void;
@@ -22,7 +22,7 @@ export const BookTableForm = (props: IBookTableFormProps) => {
     onChange={props.onNameChange}
     placeholder="Förnamn"/>
     <input type="text"
-    value={props.lastName}
+    value={props.lastname}
     onChange={props.onLastNameChange}
     placeholder="Efternamn"/>
     <input type="text"
