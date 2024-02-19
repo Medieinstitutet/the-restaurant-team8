@@ -7,7 +7,7 @@
 }
 
 .formSection {
-  width: 40%;
+  width: 35%;
   display: flex;
   flex-direction: column;
 }
@@ -18,26 +18,23 @@
   width: 100%;
 }
 
-.searchForm button {
+#searchTableBtn {
   background-color: #d26500;
   color: white;
   margin: auto;
   width: 70%;
 }
 
-#numberOfGuests {
-  background-color: white;
-  width: 10%;
-}
 
-#date {
-  background-color: #d26500;
-  width: 30%;
-}
 
 .row {
   width: 100%;
   justify-content: space-evenly;
   display: flex;
   flex-direction: row;
+}
+
+.searchFormInput{
+  width: 100%;
+  background-color: white;
 }
