@@ -1,6 +1,4 @@
 :root {
-  padding: 0;
-  margin: 0;
   font-family: "Inder", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -30,7 +28,6 @@ body {
   background-size: auto;
   background-repeat: repeat;
   margin: 0;
-  padding: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
