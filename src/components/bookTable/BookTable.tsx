@@ -35,24 +35,24 @@ export const BookTable = () => {
   });
 
   const [toggleBooking, setToggleBooking] = useState("");
-  const [tableFree19, setTableFree19] = useState(false);
+  const [tableFree18, setTableFree18] = useState(false);
   const [tableFree21, setTableFree21] = useState(false);
   const handleSearchTable = () => {
     const filterTablesDate = tablesData.filter(
       (table) => table.date === tableContainer.date
     );
 
-    const filterTablesDateTime19 = filterTablesDate.filter(
-      (table) => table.time === "19:00"
+    const filterTablesDateTime18 = filterTablesDate.filter(
+      (table) => table.time === "18:00"
     );
     const filterTablesDateTime21 = filterTablesDate.filter(
       (table) => table.time === "21:00"
     );
 
     // Max antalet bord per tid
-    filterTablesDateTime19.length < 15
-      ? setTableFree19(true)
-      : setTableFree19(false);
+    filterTablesDateTime18.length < 15
+      ? setTableFree18(true)
+      : setTableFree18(false);
     filterTablesDateTime21.length < 15
       ? setTableFree21(true)
       : setTableFree21(false);
@@ -88,7 +88,7 @@ export const BookTable = () => {
         return (
           <BookTableTime
             handleOnClick={(time) => handleOnClick(time)}
-            tableFree19={tableFree19}
+            tableFree18={tableFree18}
             tableFree21={tableFree21}
           />
         );
