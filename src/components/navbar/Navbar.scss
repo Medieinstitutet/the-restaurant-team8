@@ -1,12 +1,18 @@
 nav{
-    width: 100vw;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
     display: flex;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     flex-direction: row;
     justify-content: space-between;
     background-color: #171717;
 }
 
 .logoContainer{
+    margin-left: 1rem;
     width: 100px;
 }
 

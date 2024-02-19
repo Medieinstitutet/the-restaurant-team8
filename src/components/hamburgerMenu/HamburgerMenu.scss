@@ -6,7 +6,7 @@
   background-color: transparent;
   border: none;
   height: auto;
-  width: 5rem;
+  width: 4.5em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,6 +53,7 @@
   transform: translateY(-100%);
   transition: transform 0.3s ease;
   display: none;
+  z-index: 1;
 
   li {
     padding: 1rem;
