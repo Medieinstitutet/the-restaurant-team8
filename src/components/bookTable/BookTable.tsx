@@ -1,5 +1,6 @@
 import { FormEvent, useEffect, useState } from "react";
 import axios from "axios";
+import './BookTable.scss'
 import { SearchTableForm } from "../searchTableForm/SearchTableForm";
 import { BookTableForm } from "../bookTableForm/BookTableForm";
 import { TableClass } from "../../models/TableClass";
