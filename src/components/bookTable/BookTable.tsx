@@ -15,11 +15,14 @@ export const BookTable = () => {
       )
       .then(function (response) {
         setTablesData(response.data);
+        console.log(response.data);
       })
       .catch(function (error) {
         console.log(error);
       });
-  });
+  }, []);
+
+  console.log(tablesData);
 
   const [tableContainer, setTableContainer] = useState<TableClass>({
     restaurantId: "65ca1266c11c3c8be672e7c9",
@@ -50,10 +53,10 @@ export const BookTable = () => {
     );
 
     // Max antalet bord per tid
-    filterTablesDateTime18.length < 15
+    filterTablesDateTime18.length < 1
       ? setTableFree18(true)
       : setTableFree18(false);
-    filterTablesDateTime21.length < 15
+    filterTablesDateTime21.length < 1
       ? setTableFree21(true)
       : setTableFree21(false);
 
@@ -63,11 +66,26 @@ export const BookTable = () => {
   const handleBookTable = async (e: FormEvent) => {
     e.preventDefault();
     try {
-      await axios.post(
-        "https://school-restaurant-api.azurewebsites.net/booking/create",
-        tableContainer
-      );
+      await axios
+        .post(
+          "https://school-restaurant-api.azurewebsites.net/booking/create",
+          tableContainer
+        )
+        .then(function (response) {
+          const responseData = response.data;
+          setTablesData([
+            new BookingClass(
+              responseData.insertedId,
+              responseData.insertedId,
+              tableContainer.restaurantId,
+              tableContainer.date,
+              tableContainer.time,
+              tableContainer.numberOfGuests
+            ),
+          ]);
+        });
       setToggleBooking("2");
+
       alert("Bokningen lyckades");
     } catch (error) {
       alert("Något gick fel, försök igen");
@@ -87,6 +105,7 @@ export const BookTable = () => {
       case "openTime":
         return (
           <BookTableTime
+            handleCancel={() => setToggleBooking("")}
             handleOnClick={(time) => handleOnClick(time)}
             tableFree18={tableFree18}
             tableFree21={tableFree21}

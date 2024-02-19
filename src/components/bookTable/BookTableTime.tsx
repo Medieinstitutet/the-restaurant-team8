@@ -4,6 +4,7 @@ interface IBookTableTime {
   tableFree18: boolean;
   tableFree21: boolean;
   handleOnClick: (time: string) => void;
+  handleCancel: () => void;
 }
 
 const BookTableTime = (props: IBookTableTime) => {
@@ -18,7 +19,7 @@ const BookTableTime = (props: IBookTableTime) => {
       {!props.tableFree18 && !props.tableFree21 && (
         <>
           <h3>Fullbokad</h3>
-          <button onClick={() => location.reload()}>Gå tillbaka</button>
+          <button onClick={props.handleCancel}>Gå tillbaka</button>
         </>
       )}
     </div>
