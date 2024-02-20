@@ -40,6 +40,7 @@ body {
 }
 
 h1 {
+  max-width: 70%;
   font-family: "Inknut Antiqua", serif;
   font-weight: normal;
   font-size: 2em;
@@ -52,6 +53,7 @@ h2{
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  text-align: center;
 }
 button {
   border-radius: 8px;
@@ -66,7 +68,7 @@ button {
 }
 
 .imgContainer{
-  width: 40%;
+  width: 75%;
   margin: auto;
 }
 
@@ -88,11 +90,35 @@ button:focus-visible {
   display: flex;
   flex-direction: row;
 }
+
+.textAndImage{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
 @media screen and (min-width: 769px) {
   
   main{
     margin: auto;
     background-color: black;
+    width: 70%;
+  }
+
+  h1{
+    font-size: 3.4em;
+  }
+  .imgContainer{
+    width: 30%;
+    margin: auto;
+  }
+
+  .textAndImage {
+    margin: auto;
     width: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
