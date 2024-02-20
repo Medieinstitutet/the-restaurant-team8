@@ -1,3 +1,5 @@
+import { CustomerClass } from "./CustomerClass";
+
 export class BookingClass {
   constructor(
     public customerId: string,
@@ -6,13 +8,7 @@ export class BookingClass {
     public date: string,
     public time: string,
     public numberOfGuests: number,
-    public customer: {
-      _id: string,
-      name: string,
-      lastname: string,
-      phone: string,
-      email:string,
-    }
+    public customer: CustomerClass
   ) {}
   // Add class properties and methods here
 }

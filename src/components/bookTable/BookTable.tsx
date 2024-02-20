@@ -31,6 +31,7 @@ export const BookTable = () => {
     time: "",
     numberOfGuests: 1,
     customer: {
+      _id: "",
       name: "",
       lastname: "",
       email: "",
@@ -81,8 +82,16 @@ export const BookTable = () => {
               tableContainer.restaurantId,
               tableContainer.date,
               tableContainer.time,
-              tableContainer.numberOfGuests
+              tableContainer.numberOfGuests,
+               {
+                _id: tableContainer.customer._id,
+                name: tableContainer.customer.name,
+                lastname: tableContainer.customer.lastname,
+                phone: tableContainer.customer.phone,
+                email: tableContainer.customer.email,
+              }
             ),
+          
           ]);
         });
       setToggleBooking("2");
@@ -116,6 +125,11 @@ export const BookTable = () => {
       case "openUserInfo":
         return (
           <BookTableForm
+          name= {tableContainer.customer.name}
+          lastname= {tableContainer.customer.lastname}
+          phone= {tableContainer.customer.phone.toString()}
+          email= {tableContainer.customer.email}
+
             onNameChange={(e) =>
               setTableContainer({
                 ...tableContainer,
