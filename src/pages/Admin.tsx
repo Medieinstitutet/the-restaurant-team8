@@ -1,4 +1,4 @@
-import axios from "axios";
+
 import "../components/Admin/HandleAdmin.scss";
 import { HandleAdminTable } from "../components/Admin/HandleAdminTable";
 import { HandleAdminApi } from "../components/Admin/HandleAdminApi";
@@ -8,7 +8,7 @@ export const Admin = () => {
   const { bookings, customers, setBookings } = HandleAdminApi();
 
   const handleDelete = (id: string) => {
-   ApiService.deleteBooking(id)
+    ApiService.deleteBooking(id)
       .then(() => {
         setBookings(bookings.filter((booking) => booking._id !== id));
       })
@@ -18,10 +18,8 @@ export const Admin = () => {
   };
 
   const handleUpdate = (id: string) => {
-    axios
-      .put(
-        `https://school-restaurant-api.azurewebsites.net/booking/update/${id}`
-      )
+    ApiService.updateBooking(id)
+
       .then((response) => {
         console.log(response.data);
       })
