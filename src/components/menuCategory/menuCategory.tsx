@@ -1,5 +1,5 @@
 import { MenuItem } from "../menuItem/MenuItem";
-import "./MenuCategory.scss";
+import "./menuCategory.scss";
 import { IMenuCategory } from "../../models/IMenuCategory";
 
 export const MenuCategory = ({ title, items, images }: IMenuCategory) => {

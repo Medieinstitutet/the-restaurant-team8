@@ -1,18 +1,39 @@
-header{
-
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-height: 500px;
+  overflow: hidden;
 }
 
-header img{
-    object-fit: cover;
-    width: 100%;
+.headerImgContainer {
+  width: 100%;
+  height: 100%;
+}
+.headerImgContainer img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
-h1{
-    position: absolute;
-    padding: 1rem;
+h1 {
+  position: absolute;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 769px) {
+  header {
+    background-position: center;
+    background-size: cover;
+    background-image: url(../../images/booking_headerimage.png);
+    min-height: 600px;
+  }
+
+
+  .headerImgContainer {
+    display: none;
+    height: 100%;
+  }
 }
