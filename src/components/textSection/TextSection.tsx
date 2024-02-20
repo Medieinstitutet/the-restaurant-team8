@@ -1,3 +1,5 @@
+import './TextSection.scss'
+
 interface ITextSectionProps{
     headline: string,
     text: string
@@ -6,7 +8,7 @@ interface ITextSectionProps{
 
 export const TextSection = ({headline, text}: ITextSectionProps) => {
   return (
-    <div style={{width: "80vw", textAlign: "center", margin: "auto"}}>
+    <div className="textSection">
       <h2>{headline}</h2>
       <p>
         {text}
