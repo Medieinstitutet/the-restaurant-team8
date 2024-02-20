@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { BookingClass } from "../models/BookingClass";
 import { CustomerClass } from "../models/CustomerClass";
+import "../components/Admin/HandleAdmin.scss"
 
 export interface IBookingUpdate {
   name: string;
@@ -81,9 +82,10 @@ export const Admin = () => {
   };
 
   return (
-    <>
-      <h1>Bokingsöversikt</h1>
-      <table>
+    <div className ="booking-container">
+      <h1 className ="booking-heading" style={{position: 'static'}}>Bokingsöversikt</h1>
+      <div className="booking-table-container">
+      <table className="booking-table">
         <thead>
           <tr>
             <th>BokningsID</th>
@@ -125,7 +127,8 @@ export const Admin = () => {
           })}
         </tbody>
       </table>
-    </>
+      </div>
+    </div>
   );
 };
 

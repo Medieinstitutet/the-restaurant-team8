@@ -1,0 +1,33 @@
+.booking-container {
+   width: 100%;
+    padding: 20px;
+}
+
+.booking-heading {
+ margin-bottom: 20px;
+ text-align: center;
+}
+.booking-table-container {
+   width: 100%;
+
+}
+
+.booking-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.booking-table th, .booking-table td {
+    text-align: left;
+    padding: 8px;
+}
+
+.booking-table tr:nth-child(odd) {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+.booking-table th {
+    background-color: #333;
+    color: white;
+}
