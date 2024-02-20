@@ -31,7 +31,7 @@ export const Admin = () => {
   return (
     <div className="booking-container">
       <h1 className="booking-heading" style={{ position: "static" }}>
-        Bokingsöversikt
+        Bokningsöversikt
       </h1>
       <HandleAdminTable
         bookings={bookings}
