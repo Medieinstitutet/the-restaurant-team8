@@ -3,8 +3,7 @@ import HeaderImage from "../../src/images/home_headerimg.png";
 import { TextSection } from "../components/textSection/TextSection";
 import RestaurantImage from "../images/restaurant.png";
 import { OpeningHours } from "../components/openingHours/OpeningHours";
-import { NavLink } from "react-router-dom";
-import { Booking } from "./Booking";
+
 export const Home = () => {
   return (
     <>

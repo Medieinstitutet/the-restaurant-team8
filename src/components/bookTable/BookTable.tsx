@@ -1,6 +1,6 @@
 import { FormEvent, useEffect, useState } from "react";
 import axios from "axios";
-import './BookTable.scss'
+import "./BookTable.scss";
 import { SearchTableForm } from "../searchTableForm/SearchTableForm";
 import { BookTableForm } from "../bookTableForm/BookTableForm";
 import { TableClass } from "../../models/TableClass";
@@ -83,7 +83,7 @@ export const BookTable = () => {
               tableContainer.date,
               tableContainer.time,
               tableContainer.numberOfGuests,
-               {
+              {
                 _id: tableContainer.customer._id,
                 name: tableContainer.customer.name,
                 lastname: tableContainer.customer.lastname,
@@ -91,7 +91,6 @@ export const BookTable = () => {
                 email: tableContainer.customer.email,
               }
             ),
-          
           ]);
         });
       setToggleBooking("2");
@@ -125,11 +124,10 @@ export const BookTable = () => {
       case "openUserInfo":
         return (
           <BookTableForm
-          name= {tableContainer.customer.name}
-          lastname= {tableContainer.customer.lastname}
-          phone= {tableContainer.customer.phone.toString()}
-          email= {tableContainer.customer.email}
-
+            name={tableContainer.customer.name}
+            lastname={tableContainer.customer.lastname}
+            phone={tableContainer.customer.phone.toString()}
+            email={tableContainer.customer.email}
             onNameChange={(e) =>
               setTableContainer({
                 ...tableContainer,
