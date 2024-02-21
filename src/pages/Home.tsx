@@ -2,6 +2,7 @@ import { Header } from "../components/header/Header";
 import HeaderImage from "../../src/images/home_headerimg.png";
 import { TextSection } from "../components/textSection/TextSection";
 import RestaurantImage from "../images/restaurant.png";
+import { OpeningHours } from "../components/openingHours/OpeningHours";
 export const Home = () => {
   return (
     <>
@@ -15,9 +16,10 @@ export const Home = () => {
         Upplev det bästa av Indien, en tugga i taget."
       />
 
-      <div style={{width: "80vw", margin: "auto"}}>
-        <img style= {{width: "100%"}} src={RestaurantImage} alt="restaurang" />
-      </div>
+        <div className="imgContainer">
+        <img src={RestaurantImage} alt="restaurang" />
+        </div>
+        <OpeningHours/>
 
     </>
   );
