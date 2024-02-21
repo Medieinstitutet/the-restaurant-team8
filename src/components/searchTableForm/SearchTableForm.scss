@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
 }
@@ -37,4 +38,13 @@
 .searchFormInput{
   width: 100%;
   background-color: white;
+}
+@media screen and (min-width:769px){
+  .container{
+      width: 70%;
+      margin: auto;
+  }
+  #searchTableBtn {
+    width: 40%;
+  }
 }

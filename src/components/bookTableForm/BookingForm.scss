@@ -25,3 +25,9 @@ background-color: #D26500;
     flex-direction: column;
     align-items: center;
 }
+
+@media screen and (min-width:769px){
+    .bookingForm{
+        width: 70%;
+    }
+}
