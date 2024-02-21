@@ -27,6 +27,7 @@ export const BookTableForm = (props: IBookTableFormProps) => {
           placeholder="Efternamn"
         />
         <input
+        required
           type="email"
           onChange={props.onEmailChange}
           placeholder="Email"
