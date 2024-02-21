@@ -4,7 +4,6 @@
     padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
    background-color: #171717;
    width: 100%;
    margin-left: 1rem;
@@ -28,12 +27,14 @@
     justify-content: center;
   }
   .menu-category-image {
-    flex: 0 1 calc(50% - 10px);
+    flex: 1 0 calc(50% - 10px);
     box-sizing: border-box;
+    margin: 0 auto;
     img {
       max-width: 100%;
       height: auto;
       display: block;
+      margin: 0 auto;
     }
     
     .menu-category-image-description {
