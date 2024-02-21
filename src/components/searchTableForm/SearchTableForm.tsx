@@ -17,7 +17,8 @@ export const SearchTableForm = (props: ISearchTableFormProps) => {
       <div className="row">
         <div className="formSection">
           <label htmlFor="numberOfGuests">Antal personer</label>
-          <select className="searchFormInput"
+          <select
+            className="searchFormInput"
             name="numberOfGuests"
             id="numberOfGuests"
             onChange={props.onNumberOfGuestsChange}
@@ -33,7 +34,8 @@ export const SearchTableForm = (props: ISearchTableFormProps) => {
         </div>
         <div className="formSection">
           <label htmlFor="date">Datum</label>
-          <input className="searchFormInput"
+          <input
+            className="searchFormInput"
             min={new Date().toISOString().split("T")[0]}
             type="date"
             name="date"
@@ -43,7 +45,9 @@ export const SearchTableForm = (props: ISearchTableFormProps) => {
           />
         </div>
       </div>
-      <button id="searchTableBtn"onClick={props.handleSubmit}>Sök efter bord</button>
+      <button id="searchTableBtn" onClick={props.handleSubmit}>
+        Sök efter bord
+      </button>
     </div>
   );
 };

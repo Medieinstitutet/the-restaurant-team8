@@ -8,38 +8,33 @@ import { Admin } from "./pages/Admin";
 import { NotFound } from "./pages/NotFound";
 
 export const router = createBrowserRouter([
-    {
+  {
+    path: "/",
+    element: <Layout />,
+    errorElement: <NotFound />,
+    children: [
+      {
         path: "/",
-        element: <Layout/>,
-        errorElement: <NotFound/>,
-        children: [
-            {
-                path:"/",
-                element: <Home/>,
-                index:true,
-            },
-            {
-                path: "/booking",
-                element: <Booking/>,
-            },
-            {
-                path: "/menu",
-                element: <Menu/>,
-            
-            },
-            {
-                path: "/contact",
-                element: <Contact/>,
-            },
-                
-                {
-                path: "/admin",
-                element: <Admin/>
+        element: <Home />,
+        index: true,
+      },
+      {
+        path: "/booking",
+        element: <Booking />,
+      },
+      {
+        path: "/menu",
+        element: <Menu />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
 
-                }
-        ]
-    }
-    
+      {
+        path: "/admin",
+        element: <Admin />,
+      },
+    ],
+  },
 ]);
-
-
