@@ -1,12 +1,7 @@
 import { ChangeEvent, FormEvent } from "react";
 import "./BookingForm.scss";
-import { NavLink } from "react-router-dom";
 
 interface IBookTableFormProps {
-  name: string;
-  lastname: string;
-  email: string;
-  phone: string;
   onNameChange: (e: ChangeEvent<HTMLInputElement>) => void;
   onLastNameChange: (e: ChangeEvent<HTMLInputElement>) => void;
   onEmailChange: (e: ChangeEvent<HTMLInputElement>) => void;
@@ -20,26 +15,25 @@ export const BookTableForm = (props: IBookTableFormProps) => {
       <form className="bookingForm" onSubmit={props.handleSubmit}>
         <h2>Vem?</h2>
         <input
+          required
           type="text"
-          value={props.name}
           onChange={props.onNameChange}
           placeholder="Förnamn"
         />
         <input
+          required
           type="text"
-          value={props.lastname}
           onChange={props.onLastNameChange}
           placeholder="Efternamn"
         />
         <input
-          type="text"
-          value={props.email}
+          type="email"
           onChange={props.onEmailChange}
           placeholder="Email"
         />
         <input
-          type="text"
-          value={props.phone}
+          required
+          type="number"
           onChange={props.onPhoneChange}
           placeholder="Telefonnr"
         />
@@ -47,9 +41,14 @@ export const BookTableForm = (props: IBookTableFormProps) => {
           <button className="orange-btn" type="submit">
             Boka
           </button>
-          <NavLink to="/">
-          <button className="red-btn">Avbryt</button>
-          </NavLink>
+          <button
+            onClick={() => {
+              location.reload();
+            }}
+            className="red-btn"
+          >
+            Avbryt
+          </button>
         </div>
       </form>
     </>
