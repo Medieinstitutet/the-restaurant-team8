@@ -49,10 +49,10 @@ export const HandleAdminTable = ({
                 <td>{booking.time}</td>
                 <td>{booking.numberOfGuests}</td>
                 <td>
-                  <button onClick={() => handleUpdate(booking._id)}>
+                  <button className="red-btn" onClick={() => handleUpdate(booking._id)}>
                     Edit
                   </button>
-                  <button onClick={() => handleDelete(booking._id)}>
+                  <button className="orange-btn" onClick={() => handleDelete(booking._id)}>
                     Avboka
                   </button>
                 </td>
