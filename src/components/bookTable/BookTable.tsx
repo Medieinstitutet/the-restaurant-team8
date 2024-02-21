@@ -55,10 +55,10 @@ export const BookTable = () => {
     );
 
     // Max antalet bord per tid
-    filterTablesDateTime18.length < 1
+    filterTablesDateTime18.length < 15
       ? setTableFree18(true)
       : setTableFree18(false);
-    filterTablesDateTime21.length < 1
+    filterTablesDateTime21.length < 15
       ? setTableFree21(true)
       : setTableFree21(false);
 
