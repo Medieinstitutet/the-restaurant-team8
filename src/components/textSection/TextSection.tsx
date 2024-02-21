@@ -1,18 +1,15 @@
-import './TextSection.scss'
+import "./TextSection.scss";
 
-interface ITextSectionProps{
-    headline: string,
-    text: string
-
+interface ITextSectionProps {
+  headline: string;
+  text: string;
 }
 
-export const TextSection = ({headline, text}: ITextSectionProps) => {
+export const TextSection = ({ headline, text }: ITextSectionProps) => {
   return (
     <div className="textSection">
       <h2>{headline}</h2>
-      <p>
-        {text}
-      </p>
+      <p>{text}</p>
     </div>
   );
 };

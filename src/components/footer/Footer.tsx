@@ -18,9 +18,15 @@ export const Footer = () => {
       </div>
 
       <div className="iconsWrapper col">
-        <div className="iconContainer"><img src={InstagramIcon} alt="instagram-ikon" /></div>
-        <div className="iconContainer"><img src={FacebookIcon} alt="facebook-ikon" /></div>
-        <div className="iconContainer"><img src={XIcon} alt="x-ikon" /></div>
+        <div className="iconContainer">
+          <img src={InstagramIcon} alt="instagram-ikon" />
+        </div>
+        <div className="iconContainer">
+          <img src={FacebookIcon} alt="facebook-ikon" />
+        </div>
+        <div className="iconContainer">
+          <img src={XIcon} alt="x-ikon" />
+        </div>
       </div>
     </footer>
   );

@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import "../hamburgerMenu/HamburgerMenu.scss";
 import { IHamburgerMenu } from "../../models/IHamburgerMenu";
 
-
 export const HamburgerMenu = ({ isOpen, toggleMenu }: IHamburgerMenu) => {
   return (
     <>

@@ -18,13 +18,21 @@ export const Navbar = () => {
         <HamburgerMenu isOpen={isOpen} toggleMenu={toggleMenu} />
       </div>
       <div className="navLinksContainerDesktop">
-        <NavLink className="navlinkDesktop" to="/">Home</NavLink>
-        <NavLink className="navlinkDesktop" to="/booking">Boka</NavLink>
+        <NavLink className="navlinkDesktop" to="/">
+          Home
+        </NavLink>
+        <NavLink className="navlinkDesktop" to="/booking">
+          Boka
+        </NavLink>
         <div className="logoContainerDesktop">
-        <img src={logo} alt="logotyp" />
-      </div>
-        <NavLink className="navlinkDesktop" to="/menu">Meny</NavLink>
-        <NavLink className="navlinkDesktop" to="/contact">Kontakt</NavLink>
+          <img src={logo} alt="logotyp" />
+        </div>
+        <NavLink className="navlinkDesktop" to="/menu">
+          Meny
+        </NavLink>
+        <NavLink className="navlinkDesktop" to="/contact">
+          Kontakt
+        </NavLink>
       </div>
     </nav>
   );
