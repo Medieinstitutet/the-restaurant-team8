@@ -1,5 +1,6 @@
 import { ChangeEvent, FormEvent } from "react";
 import "./BookingForm.scss";
+import { NavLink } from "react-router-dom";
 
 interface IBookTableFormProps {
   name: string;
@@ -46,7 +47,9 @@ export const BookTableForm = (props: IBookTableFormProps) => {
           <button className="orange-btn" type="submit">
             Boka
           </button>
+          <NavLink to="/">
           <button className="red-btn">Avbryt</button>
+          </NavLink>
         </div>
       </form>
     </>
