@@ -2,6 +2,10 @@ import { ChangeEvent, FormEvent } from "react";
 import "./BookingForm.scss";
 
 interface IBookTableFormProps {
+  name: string;
+  lastname: string;
+  email: string;
+  phone: string;
   onNameChange: (e: ChangeEvent<HTMLInputElement>) => void;
   onLastNameChange: (e: ChangeEvent<HTMLInputElement>) => void;
   onEmailChange: (e: ChangeEvent<HTMLInputElement>) => void;
