@@ -75,6 +75,9 @@ export const BookTable = () => {
         )
         .then(function (response) {
           const responseData = response.data;
+          console.log(tableContainer
+            );
+          
           setTablesData([
             new BookingClass(
               responseData.insertedId,

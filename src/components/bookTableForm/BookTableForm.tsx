@@ -42,6 +42,9 @@ export const BookTableForm = (props: IBookTableFormProps) => {
           onChange={props.onPhoneChange}
           placeholder="Telefonnr"
         />
+
+    <label htmlFor="consent">Genom att klicka i denna ruta godkänner du våra användningsvillkor och GDPR</label>
+        <input  required type="checkbox" name="consent" id="consent" />
         <div>
           <button className="orange-btn" type="submit">
             Boka
